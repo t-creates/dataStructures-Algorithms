@@ -29,6 +29,6 @@ const divisions = (n, divisor) => {
 };
 
 // Solution #1
-const divisions = (n, divisor) => {
+const divisions1 = (n, divisor) => {
   return Math.floor(Math.log(n)/Math.log(divisor))
 };
