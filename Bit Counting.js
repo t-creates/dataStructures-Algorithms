@@ -8,10 +8,11 @@ Example: The binary representation of 1234 is 10011010010, so the function shoul
 // Solution #0
 var countBits = function(n) {
   let answer = 0;
-// take input
-  const number = parseInt(n);
+// take input turn it into a string if it is not already
+  const number = parseInt(n); 
 // convert to binary
   const result = number.toString(2);
+  // Loop through the binary number adding all the ones 
   for (let i = 0; result.length > i; i++) {
     if (result[i] === '1') {
      answer++;
@@ -20,7 +21,7 @@ var countBits = function(n) {
   return answer;
 };
 
-// Solution #1
+// Solution #1  --- Loops though n dividing it by two everytime and adds all the remainders.
 var countBits1 = function(n) {
   var count = 0;
   while(n > 0){
