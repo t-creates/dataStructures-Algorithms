@@ -17,7 +17,7 @@ function solution(number){
       return 0
     }
     else if (loopLength % 3 === 0 || loopLength % 5 === 0) {
-      loopLength += result;
+      result += loopLength;
     }
     loopLength++;
   }
@@ -25,3 +25,12 @@ function solution(number){
 }
 
 // Solution #1
+function solution(number){
+  var sum = 0;
+  for (var i = 3; i < number; i++) {
+    if (i % 3 == 0 || i % 5 == 0) {
+      sum += i;
+    }
+  }
+  return sum;
+}
