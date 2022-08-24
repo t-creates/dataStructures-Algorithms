@@ -17,14 +17,16 @@ The numbers are positives
 // Solution #0
 function add(a, b) {
   let result = '', c = 0;
+  // Turn to array's
   a = a.split('');
   b = b.split('');
   
   while (a.length || b.length || c) {
+    // ~~ substitute for Math.floor (only works similar on positive numbers)
+    // Add a and b to c array
     c += ~~a.pop() + ~~b.pop();
-    console.log(c)
+    // Remainder added to result
     result = c % 10 + result
-    console.log(result)
     c = c > 9
   }
   return result
