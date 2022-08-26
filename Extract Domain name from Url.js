@@ -27,3 +27,4 @@ function domainName3(url){
   const result = url.split(regexPattern).find(el => el);
   return result;
 }
+
