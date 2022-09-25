@@ -43,3 +43,12 @@ function firstNonRepeatingLetter1(s) {
     return '';
 }
 
+// Solution #2
+function firstNonRepeatingLetter2(s) {
+    for (var i in s) {
+        if (s.indexOf(s[i]) == s.lastIndexOf(s[i])) {
+            return s[i];
+        }
+    }
+    return '';
+}
