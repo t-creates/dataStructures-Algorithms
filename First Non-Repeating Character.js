@@ -34,3 +34,12 @@ function firstNonRepeatingLetter(s) {
 }
 
 // Solution #1
+function firstNonRepeatingLetter1(s) {
+    for (var i in s) {
+        if (s.match(new RegExp(s[i],"gi")).length === 1) {
+            return s[i];
+        }
+    }
+    return '';
+}
+
