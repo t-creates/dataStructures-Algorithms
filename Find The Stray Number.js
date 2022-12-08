@@ -12,8 +12,26 @@ Examples
 
 */
 
-// Solution #0
+// BEST SOLUTION
 function stray(numbers) {
+  // create an empty object to store the number of times each element occurs
+  const counts = {};
+
+  // loop through the input array and count the number of times each element occurs
+  for (let i = 0; i < numbers.length; i++) {
+    const num = numbers[i];
+    counts[num] = counts[num] ? counts[num] + 1 : 1;
+  }
+
+  // loop through the counts object and find the element that occurs only once
+  for (const num in counts) {
+    if (counts[num] === 1) return Number(num);
+  }
+}
+
+
+// Solution #0
+function stray0(numbers) {
   return numbers.filter(n => numbers.indexOf(n) === numbers.lastIndexOf(n))[0];
 }
 
